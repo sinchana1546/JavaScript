@@ -1,14 +1,30 @@
+Hello, World!
+NaN
+222
+HelloWorld89
+NaN
+Hello78
+-122
+90
+44
+false
+Devan slice
+12 length
+DEVANK DALAL Uppercase
+devank dalal LowerCase
+Devank dalal name
+olleH
+I love Python
+Apple, Apple, Apple
 Highest: 122
 Lowest: 1
-Sorted fruits: [ 'Apple', 'Banana', 'Mango', 'Orange' ]
-First three: [ 10, 20, 30 ]
-Before splice: [ 10, 20, 30, 40 ]
-After splice: [ 10, 25, 30, 40 ]
-Animal name: Dog
+[ 'Apple', 'Banana', 'Mango', 'Orange' ]
+[ 10, 20, 30 ]
+Before: [ 10, 20, 30, 40 ]
+After: [ 10, 25, 30, 40 ]
+Dog
 Bark
-Car brand: Toyota
+Toyota
 Car started
-Multiply: 60
-Divide 10 / 2: 5
-Divide 15 / 3: 5
-Divide 10 / 0: Cannot divide by zero!
+60
+5
