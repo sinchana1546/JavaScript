@@ -1,76 +1,88 @@
-// ---------- Math: Max & Min ----------
-const nums1 = [23, 122, 1, 23, 4, 56];
+// ********** Basic Console Logs **********
+console.log("Hello, World!"); // Prints a string
+console.log('A' - 1);         // Converts 'A' to its char code (65) and subtracts 1 => 64
+console.log(2 + '2' + '2');   // Number 2 is converted to string and concatenated => '222'
+console.log('Hello' + 'World' + 89); // Concatenates strings and number => 'HelloWorld89'
+console.log('Hello' - 'World' + 89); // NaN + 89 => NaN (invalid arithmetic)
+console.log('Hello' + 78);    // Concatenates string with number => 'Hello78'
+console.log('78' - 90 + '2'); // 78 - 90 = -12, then concatenated with '2' => '-122'
+console.log(2 - '2' + 90);    // 2-2 = 0, +90 => 90
+console.log(89 - '90' / 2);   // 90/2 = 45, 89-45 = 44
+console.log((true == false) > 2); // false > 2 => false
 
-const highest = Math.max(...nums1);
-const lowest = Math.min(...nums1);
+// ********** String Manipulation **********
+let name = "Devank dalal";
+console.log(name.slice(0, 5), "slice"); // Extracts first 5 characters => 'Devan'
+console.log(name.length, "length");     // Length of string => 12
+console.log(name.toUpperCase(), "Uppercase"); // Converts to uppercase
+console.log(name.toLowerCase(), "LowerCase"); // Converts to lowercase
+console.log(name.trim(), "name");       // Removes extra spaces (if any)
 
+let str = "Hello";
+let reversed = str.split("").reverse().join(""); // Reverses string
+console.log(reversed);
+
+// ********** Replace Function Examples **********
+let text = "I love JavaScript";
+let newText1 = text.replace("JavaScript", "Python"); // Replaces first occurrence
+console.log(newText1); // I love Python
+
+let text2 = "Banana, Banana, Banana";
+let newText2 = text2.replace(/Banana/g, "Apple"); // Replaces all occurrences using regex
+console.log(newText2); // Apple, Apple, Apple
+
+// ********** Array Operations **********
+const numbers1 = [23, 122, 1, 23, 4, 56];
+const highest = Math.max(...numbers1);  // Maximum value => 122
+const lowest = Math.min(...numbers1);   // Minimum value => 1
 console.log("Highest:", highest);
 console.log("Lowest:", lowest);
 
-
-// ---------- Array Sort ----------
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort();
-console.log("Sorted fruits:", fruits);
+fruits.sort(); // Sort alphabetically
+console.log(fruits);
 
+const numbers2 = [10, 20, 30, 40, 50];
+const firstThree = numbers2.slice(0, 3); // Get first 3 elements
+console.log(firstThree);
 
-// ---------- slice() example ----------
-const nums2 = [10, 20, 30, 40, 50];
-const firstThree = nums2.slice(0, 3);
-console.log("First three:", firstThree);
+const numbers3 = [10, 20, 30, 40];
+console.log("Before:", numbers3);
+numbers3.splice(1, 1, 25); // Replace 2nd element (index 1) with 25
+console.log("After:", numbers3);
 
-
-// ---------- splice() example ----------
-const nums3 = [10, 20, 30, 40];
-console.log("Before splice:", nums3);
-
-// Remove 2nd element and add 25
-nums3.splice(1, 1, 25);
-
-console.log("After splice:", nums3);
-
-
-// ---------- Object example (animal) ----------
+// ********** Object Operations **********
 let animal = {
   name: "Dog",
   type: "Mammal",
   sound: "Bark",
-  makeSound() {
-    console.log(this.sound);
+  makeSound: function () {
+    console.log(this.sound); // Prints the animal sound
   }
 };
+console.log(animal.name);   // Dog
+animal.makeSound();         // Bark
 
-console.log("Animal name:", animal.name);
-animal.makeSound();
-
-
-// ---------- Object example (car) ----------
 let car = {
   brand: "Toyota",
   model: "Corolla",
   year: 2022,
-  start() {
+  start: function () {
     console.log("Car started");
   }
 };
+console.log(car.brand);     // Toyota
+car.start();                // Car started
 
-console.log("Car brand:", car.brand);
-car.start();
-
-
-// ---------- Arrow function ----------
+// ********** Functions **********
 const multiplyThree = (a, b, c) => a * b * c;
-console.log("Multiply:", multiplyThree(10, 2, 3));
+console.log(multiplyThree(10, 2, 3)); // 10*2*3 = 60
 
-
-// ---------- Normal function ----------
 function divideTwo(a, b) {
   if (b === 0) {
     return "Cannot divide by zero!";
   }
   return a / b;
 }
+console.log(divideTwo(10, 2)); // 5
 
-console.log("Divide 10 / 2:", divideTwo(10, 2));
-console.log("Divide 15 / 3:", divideTwo(15, 3));
-console.log("Divide 10 / 0:", divideTwo(10, 0));
