@@ -1,0 +1,14 @@
+Highest: 122
+Lowest: 1
+Sorted fruits: [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+First three: [ 10, 20, 30 ]
+Before splice: [ 10, 20, 30, 40 ]
+After splice: [ 10, 25, 30, 40 ]
+Animal name: Dog
+Bark
+Car brand: Toyota
+Car started
+Multiply: 60
+Divide 10 / 2: 5
+Divide 15 / 3: 5
+Divide 10 / 0: Cannot divide by zero!
